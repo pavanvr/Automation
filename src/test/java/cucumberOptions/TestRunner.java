@@ -1,5 +1,7 @@
 package cucumberOptions;
 
+import org.testng.annotations.Test;
+
 //import org.junit.runner.RunWith;
 
 //import org.junit.runner.RunWith;
@@ -13,6 +15,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(  
 	    features = "src/test/java/features",
 	    glue="stepDefinitions")
+
+@Test
 public class TestRunner extends AbstractTestNGCucumberTests  {
 
 }

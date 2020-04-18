@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Automation.HomePage">
+      <class name="stepDefinitions.StepDefSubmitOrderNewUser">
         <methods>
-          <include name="homePageNavigation"/>
+          <include name="order_is_successful_and_a_confirmation_is_displayed"/>
+          <include name="user_adds_products_to_the_cart_and_proceeds_to_checkout"/>
         </methods>
-      </class> <!-- Automation.HomePage -->
+      </class> <!-- stepDefinitions.StepDefSubmitOrderNewUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

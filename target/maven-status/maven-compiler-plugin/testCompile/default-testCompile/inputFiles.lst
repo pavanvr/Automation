@@ -1,4 +1,8 @@
-C:\Users\Pavan\MyShopping\src\test\java\Automation\AppTest.java
-C:\Users\Pavan\MyShopping\src\test\java\cucumberOptions\TestRunner.java
-C:\Users\Pavan\MyShopping\src\test\java\Automation\HomePage.java
-C:\Users\Pavan\MyShopping\src\test\java\stepDefinitions\StepDefinition.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\stepDefinitions\StepDefSignInToAc.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\Automation\HomePage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\cucumberOptions\TestRunner.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\stepDefinitions\StepDefCreateAccount.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\stepDefinitions\StepDefSearchProds.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\stepDefinitions\StepDefSubmitOrderExistingUser.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\stepDefinitions\StepDefSubmitOrderNewUser.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\test\java\Automation\AppTest.java

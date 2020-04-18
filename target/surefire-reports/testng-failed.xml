@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]">
-  <test name="Validating User login(failed)">
+  <listeners>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="My Shopping(failed)">
     <classes>
       <class name="cucumberOptions.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature"/>
+          <include name="feature" invocation-numbers="1 4"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- cucumberOptions.TestRunner -->
     </classes>
-  </test> <!-- Validating User login(failed) -->
+  </test> <!-- My Shopping(failed) -->
 </suite> <!-- Failed suite [Suite] -->

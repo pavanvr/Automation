@@ -1,7 +1,6 @@
-package Resources;
+package resources;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -19,20 +18,28 @@ public class Base {
 
 	public WebDriver initDriver() throws IOException {
 		prop = new Properties();
-
-		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\Pavan\\MyShopping\\src\\main\\java\\Resources\\data.properties");
+		
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + prop.getProperty(key));
+		//System.out.println(System.getProperty("user.dir") + Configurations.ChromeDriverPath);
+		String userDir = System.getProperty("user.dir");
+		System.out.println(userDir);
+		FileInputStream fis = new FileInputStream(userDir + "\\src\\main\\java\\Resources\\data.properties");
+		
 		prop.load(fis);
 		String browser = prop.getProperty("browser");
-
+		String browserDriver = prop.getProperty("chromeDriverPath");
+		System.out.println(userDir+browserDriver);
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C://Users//Pavan//Selenium//Drivers//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", userDir + prop.getProperty("chromeDriverPath"));
+			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pavan\\Selenium\\Drivers\\chromedriver.exe" );
+			
 			driver = new ChromeDriver();
-			// execute in chrome driver
-
+			driver.get(prop.getProperty("url"));
+			
 		} else if (browser.equals("firefox")) {
+			System.setProperty("webdriver.chrome.driver", userDir + prop.getProperty("firefoxDriverPath"));
 			driver = new FirefoxDriver();
-			// firefox code
+			
 		} else if (browser.equals("IE")) {
 			// IE code
 		}

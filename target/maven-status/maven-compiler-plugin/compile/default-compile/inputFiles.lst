@@ -1,5 +1,12 @@
-C:\Users\Pavan\MyShopping\src\main\java\pageObjects\LoginPage.java
-C:\Users\Pavan\MyShopping\src\main\java\pageObjects\UserAccountPage.java
-C:\Users\Pavan\MyShopping\src\main\java\Resources\Base.java
-C:\Users\Pavan\MyShopping\src\main\java\Automation\App.java
-C:\Users\Pavan\MyShopping\src\main\java\pageObjects\LandingPage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\resources\Base.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\Automation\App.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\AddToCart.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\CreateAccountPage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\LandingPage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\SearchProducts.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\resources\DataHelper.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\resources\ExtentReporterNG.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\SearchResPage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\LoginPage.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\CheckOut.java
+C:\Users\Pavan\git\MyStoreAutomation\MyStoreAutomation\src\main\java\pageObjects\UserAccountPage.java

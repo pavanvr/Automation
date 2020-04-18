@@ -6,15 +6,15 @@ import org.openqa.selenium.WebElement;
 
 public class LandingPage {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	
-	By signIn = By.xpath("//a[@class='login']");
+	public static final By signIn = By.xpath("//a[@class='login']");
 	
 	
 	
 	
 	public LandingPage(WebDriver driver) {
-		this.driver=driver;
+		LandingPage.driver=driver;
 	}
 	
 	public WebElement getLogin()

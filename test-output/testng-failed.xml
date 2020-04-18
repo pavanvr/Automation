@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Validating User login(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="cucumberOptions.TestRunner">
+      <class name="stepDefinitions.StepDefSubmitOrderNewUser">
         <methods>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="order_is_successful_and_a_confirmation_is_displayed"/>
+          <include name="user_adds_products_to_the_cart_and_proceeds_to_checkout"/>
         </methods>
-      </class> <!-- cucumberOptions.TestRunner -->
+      </class> <!-- stepDefinitions.StepDefSubmitOrderNewUser -->
     </classes>
-  </test> <!-- Validating User login(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,27 +1,13 @@
 Feature: Application Login
 
 
-Scenario Outline: User Home page displayed after login
+Scenario Outline: User logs into his account and checks his personal information
 Given user is in landing page
 When user logs in to application with <email> and <password>
-Then User home page is displayed
+Then User home page is displayed and user proceeds to check personal information
+Then User personal information page is displayed with user personal details 
 
 
 Examples:
 |email					|password	|
 |komomolk123@gmail.com	|john123	|
-
-
-
-
-Scenario Outline: Search products 
-Given I enter <searchItem> and hit Enter key
-Then search results are displayed 
-
-Examples: 
-|searchItem|
-|dresses|
-
-Scenario: Add products to the cart and checkout 
-Given User adds products to the cart and proceeds to checkout
-Then Order is successful and a confirmation is displayed
