@@ -5,42 +5,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class UserAccountPage {
-	
+
 	public static WebDriver driver;
-	
-	
-	public static final By userAcHome = By.xpath("//*[@id='center_column']/p");
-	public static final By userPersInfo = By.xpath("//span[text()='My personal information']");
-	public static final By userPersInfoConfMsg = By.xpath("//*[@id='center_column']/div/h1");
-	
+
+	public static final By USER_AC_HOME = By.xpath("//*[@id='center_column']/p");
+	public static final By USER_PERS_INFO = By.xpath("//span[text()='My personal information']");
+	public static final By USER_PERS_INFO_CONF_MSG = By.xpath("//*[@id='center_column']/div/h1");
+
 	public UserAccountPage(WebDriver driver) {
-		UserAccountPage.driver=driver;
+		UserAccountPage.driver = driver;
 	}
 
-	public WebElement getUserAcPageConfn()
-	{
-		return driver.findElement(userAcHome);
+	public WebElement getUserAcPageConfn() {
+		return driver.findElement(USER_AC_HOME);
 	}
+
+	public WebElement getUserPersInfoPage() {
+		return driver.findElement(USER_PERS_INFO);
+	}
+
+	public WebElement getUserPersInfoConfMsg() {
+		return driver.findElement(USER_PERS_INFO_CONF_MSG);
+	}
+
 	
-	public WebElement getUserPersInfoPage()
-	{
-		return driver.findElement(userPersInfo);
-	}
-	
-	public WebElement getUserPersInfoConfMsg()
-	{
-		return driver.findElement(userPersInfoConfMsg);
-	}
-	/*
-	public static String userMyAcConfMessage() {
-		String ConfirmationMessage = driver.findElement(userAcHome).getText();
-		return ConfirmationMessage;
-	}
-	*/
 	public static String userPersInfoConfMessage() {
-		
-		String confirmationMessage = driver.findElement(userPersInfoConfMsg).getText();
+
+		String confirmationMessage = driver.findElement(USER_PERS_INFO_CONF_MSG).getText();
 		return confirmationMessage;
-		
+
 	}
 }

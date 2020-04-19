@@ -30,7 +30,7 @@ public class StepDefCreateAccount extends Base {
 		System.out.println(email);
 		createAc.getCreateAcPage(email);
 		createAc.createNewAccount();
-		//System.out.println(CreateAccountPage.createAcConfMessage());
+		
     }
     
 	@Then("^User account is created and user home page is displayed$")
@@ -38,9 +38,8 @@ public class StepDefCreateAccount extends Base {
 
 		String confMessage = CreateAccountPage.createAcConfMessage();
 		System.out.println(confMessage);
-		Assert.assertTrue(confMessage.contains("Welcome to your account"));
-		//Assert.assertTrue(confMessage.equalsIgnoreCase(
-			//	"Welcome to your account. Here you can manage all of your personal information and orders."));
+		Assert.assertTrue(confMessage.equalsIgnoreCase(
+				"Welcome to your account. Here you can manage all of your personal information and orders."));
 		
 	}
 

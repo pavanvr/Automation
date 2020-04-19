@@ -1,8 +1,7 @@
-Automation\HomePage.class
 stepDefinitions\StepDefSignInToAc.class
-stepDefinitions\StepDefSubmitOrderExistingUser.class
 stepDefinitions\StepDefCreateAccount.class
-stepDefinitions\StepDefSubmitOrderNewUser.class
-cucumberOptions\TestRunner.class
 stepDefinitions\StepDefSearchProds.class
 Automation\AppTest.class
+stepDefinitions\StepDefSubmitOrderExistingUser.class
+stepDefinitions\StepDefSubmitOrderNewUser.class
+cucumberOptions\TestRunner.class

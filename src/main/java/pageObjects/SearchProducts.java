@@ -11,29 +11,29 @@ public class SearchProducts {
 
 	public static WebDriver driver;
 	
-	public static final By search = By.xpath("//input[@id='search_query_top']");
-	public static final By prodName = By.linkText("Printed Summer Dress");
-	public static final By resText = By.xpath("//*[@id=\"center_column\"]/h1/span[2]");
-	
+	public static final By SEARCH = By.xpath("//input[@id='search_query_top']");
+	public static final By PROD_NAME = By.linkText("Printed Summer Dress");
+	public static final By RES_TEXT = By.xpath("//*[@id=\'center_column\']/h1/span[2]");
+		
 	public SearchProducts(WebDriver driver) {
 		SearchProducts.driver=driver;
 	}
-	
-	
+		
 	public WebElement getSearch()
 	{ 
-		return driver.findElement(search);
+		return driver.findElement(SEARCH);
 	}
 	public WebElement getResultsText()
 	{ 
-		return driver.findElement(resText);
+		return driver.findElement(RES_TEXT);
 	}
-	public WebElement getProducts()
+		public WebElement getProducts()
 	{ 
-		return driver.findElement(prodName);
+		return driver.findElement(PROD_NAME);
 	}
 	public static String resultsConfirmationMsg() {
-		String resConfirmationMessage = driver.findElement(resText).getText();
+		String resConfirmationMessage = driver.findElement(RES_TEXT).getText();
 		return resConfirmationMessage;
 	}
+	
 }

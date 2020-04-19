@@ -7,11 +7,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import pageObjects.SearchProducts;
 import resources.Base;
-import junit.framework.Assert;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
+
 
 @Test
 public class StepDefSearchProds extends Base {
-
+	
 	@Given("^User enters (.+) and hits Enter key$")
 	public void user_enters_and_hits_enter_key(String searchItem) throws Throwable {
 
@@ -19,7 +21,6 @@ public class StepDefSearchProds extends Base {
 		driver = initDriver();
 		
 		SearchProducts s = new SearchProducts(driver);
-
 		s.getSearch().sendKeys(searchItem);
 		s.getSearch().sendKeys(Keys.ENTER);
 	}
@@ -29,8 +30,16 @@ public class StepDefSearchProds extends Base {
 		
 		String resMessage = SearchProducts.resultsConfirmationMsg();
 		System.out.println(resMessage);
-		Assert.assertTrue(resMessage.contains("  results have been found"));
 		
+		if (resMessage.contains("results"))
+		{		
+			assertThat(resMessage,containsString("results have been found"));
+		}
+		else
+		{		
+			assertThat(resMessage,containsString("result has been found"));
+		}	
+			
 	}
 
 }

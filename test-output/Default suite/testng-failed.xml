@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="stepDefinitions.StepDefSubmitOrderNewUser">
+      <class name="stepDefinitions.StepDefCreateAccount">
         <methods>
-          <include name="order_is_successful_and_a_confirmation_is_displayed"/>
-          <include name="user_adds_products_to_the_cart_and_proceeds_to_checkout"/>
+          <include name="user_account_is_created_and_user_home_page_is_displayed"/>
         </methods>
-      </class> <!-- stepDefinitions.StepDefSubmitOrderNewUser -->
+      </class> <!-- stepDefinitions.StepDefCreateAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

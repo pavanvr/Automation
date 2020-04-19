@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test name="My Shopping(failed)">
+  <test name="My Srore Automation(failed)">
     <classes>
       <class name="cucumberOptions.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="1 4"/>
+          <include name="feature" invocation-numbers="1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- cucumberOptions.TestRunner -->
     </classes>
-  </test> <!-- My Shopping(failed) -->
+  </test> <!-- My Srore Automation(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -42,16 +42,11 @@ public class StepDefSignInToAc extends Base {
 				"Welcome to your account. Here you can manage all of your personal information and orders."));
 
 		ua.getUserPersInfoPage().click();
-		// String userPersInfo = ua.getUserPersInfoConfMsg().getText();
-		// System.out.println(userPersInfo);
 	}
 
 	@Then("^User personal information page is displayed with user personal details$")
 	public void user_personal_information_page_is_displayed_with_user_personal_details() throws Throwable {
-		// System.out.println("AcDet");
-		// UserAccountPage ua = new UserAccountPage(driver);
-		// ua.getUserPersInfoPage().click();
-
+		
 		String userPersInfoConfMessage = UserAccountPage.userPersInfoConfMessage();
 		System.out.println(userPersInfoConfMessage);
 		Assert.assertTrue(userPersInfoConfMessage.equalsIgnoreCase("Your personal information"));

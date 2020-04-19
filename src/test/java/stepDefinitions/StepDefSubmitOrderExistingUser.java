@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -26,6 +28,7 @@ public class StepDefSubmitOrderExistingUser extends Base {
 		Actions action = new Actions(driver);
 		action.moveToElement(prod1).build().perform();
 		atc.addProdToCart1().click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS );
 		Thread.sleep(2000);
 		atc.contToShop().click();
 		Thread.sleep(2000);

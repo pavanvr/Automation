@@ -7,5 +7,7 @@ Then search results are displayed
 Examples: 
 |searchItem|
 |dresses|
+|blouse|
+
 
 

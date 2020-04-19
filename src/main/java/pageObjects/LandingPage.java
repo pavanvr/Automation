@@ -8,7 +8,7 @@ public class LandingPage {
 	
 	public static WebDriver driver;
 	
-	public static final By signIn = By.xpath("//a[@class='login']");
+	public static final By SIGN_IN = By.xpath("//a[@class='login']");
 	
 	
 	
@@ -19,7 +19,7 @@ public class LandingPage {
 	
 	public WebElement getLogin()
 	{ 
-		return driver.findElement(signIn);
+		return driver.findElement(SIGN_IN);
 	}
 	
 	

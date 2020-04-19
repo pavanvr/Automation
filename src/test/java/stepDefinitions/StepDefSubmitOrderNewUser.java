@@ -35,12 +35,10 @@ public class StepDefSubmitOrderNewUser extends Base {
 		Thread.sleep(2000);
 		atc.proceedToCheckOut().click();
 		atc.proceedToCheckOut1().click();
-
 		
 		CheckOut co = new CheckOut(driver);
-		co.createNewAccount();
+		co.registerNewUser();
 		co.proceedToChkout();
-
 	}
 
 	@Then("^Order is successful and a confirmation is displayed$")

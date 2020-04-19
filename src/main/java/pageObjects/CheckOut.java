@@ -18,71 +18,42 @@ public class CheckOut extends Base {
 
 	}
 
-	public static final By EMAIL_ADDRESS_IDENTIFIER = By.id("email_create");
-	public static final By CREATE_AN_ACCOUNT_IDENTIFIER = By.id("SubmitCreate");
-	public static final By TITLE_IDENTIFIER = By.id("id_gender1");
-	public static final By FIRST_NAME_IDENTIFIER = By.id("customer_firstname");
-	public static final By SECOND_NAME_IDENTIFIER = By.id("customer_lastname");
-	public static final By PASSWORD_IDENTIFIER = By.id("passwd");
-	public static final By DOB_DATE_IDENTIFIER = By.id("days");
-	public static final By DOB_MONTH_IDENTIFIER = By.id("months");
-	public static final By DOB_YEARS_IDENTIFIER = By.id("years");
-	public static final By ADDRESS_IDENTIFIER = By.id("address1");
-	public static final By CITY_IDENTIFIER = By.id("city");
-	public static final By STATE_IDENTIFIER = By.id("id_state");
-	public static final By POSTAL_CODE_IDENTIFIER = By.id("postcode");
-	public static final By MOBILE_PHONE_IDENTIFIER = By.id("phone_mobile");
-	public static final By REGISTER_BUTTON_IDENTIFIER = By.xpath("//span[text()='Register']");
-	public static final By PROCEED_TO_CHECKOUT_IDENTIFIER = By.xpath("//span[text()='Proceed to checkout']");
-	//public static final By PROCEED_TO_CHECKOUT_IDENTIFIER = By.xpath("//*[contains(text(),'Proceed to checkout']");
-	public static final By AGREE_TERMS_IDENTIFIER = By.id("cgv");
-	public static final By PAY_BY_CHECK_IDENTIFIER = By.xpath("//a[contains(@title,'Pay by check')]");
-	public static final By CONFIRM_ORDER_BUTTON_IDENTIFIER = By.xpath("//span[text()='I confirm my order']");
-	public static final By PROCEED_TO_CHECKOUT_IDENTIFIER1 = By.cssSelector("#form > p > button");
-	public static final By CONFIRMATION_TEXT_IDENTIFIER = By.xpath("//p[text()='Your order on My Store is complete.']");
-
-	public static final By EMAIL = By.xpath("//*[@id='email']");
-	public static final By PASSWORD = By.xpath("//*[@id='passwd']");
+	public static final By EMAIL_ADDRESS = By.id("email_create");
+	public static final By CREATE_AN_ACCOUNT = By.id("SubmitCreate");
+	public static final By TITLE = By.id("id_gender1");
+	public static final By FIRST_NAME = By.id("customer_firstname");
+	public static final By SECOND_NAME = By.id("customer_lastname");
+	public static final By DOB_DATE = By.id("days");
+	public static final By DOB_MONTH = By.id("months");
+	public static final By DOB_YEARS = By.id("years");
+	public static final By ADDRESS = By.id("address1");
+	public static final By CITY = By.id("city");
+	public static final By STATE = By.id("id_state");
+	public static final By POSTAL_CODE = By.id("postcode");
+	public static final By MOBILE_PHONE = By.id("phone_mobile");
+	public static final By REGISTER_BUTTON = By.xpath("//span[text()='Register']");
+	public static final By PROCEED_TO_CHECKOUT = By.xpath("//span[text()='Proceed to checkout']");
+	public static final By AGREE_TERMS = By.id("cgv");
+	public static final By PAY_BY_CHECK = By.xpath("//a[contains(@title,'Pay by check')]");
+	public static final By CONFIRM_ORDER_BUTTON = By.xpath("//span[text()='I confirm my order']");
+	public static final By PROCEED_TO_CHECKOUT1 = By.cssSelector("#form > p > button");
+	public static final By CONFIRMATION_TEXT = By.xpath("//p[text()='Your order on My Store is complete.']");
+	public static final By EMAIL = By.id("email");
+	public static final By PASSWORD = By.id("passwd");;
 	public static final By SIGNIN = By.xpath("//*[@id='SubmitLogin']/span");
 			
-	public void createNewAccount() throws InterruptedException {
+	
+	public void registerNewUser() throws InterruptedException {
 
 		String text = DataHelper.alphaNumericString(5);
 		String email = text+"@mailmaru.com";
-		driver.findElement(EMAIL_ADDRESS_IDENTIFIER).sendKeys(email);
-		driver.findElement(CREATE_AN_ACCOUNT_IDENTIFIER).click();
+		driver.findElement(EMAIL_ADDRESS).sendKeys(email);
+		driver.findElement(CREATE_AN_ACCOUNT).click();
 		Thread.sleep(2000);
-		driver.findElement(TITLE_IDENTIFIER).click();
-		driver.findElement(FIRST_NAME_IDENTIFIER).sendKeys("Testname");
-		driver.findElement(SECOND_NAME_IDENTIFIER).sendKeys("Testsurname");
-		driver.findElement(PASSWORD_IDENTIFIER).sendKeys("Password-1");
-		WebElement DOB1 = driver.findElement(DOB_DATE_IDENTIFIER);
-		WebElement DOB2 = driver.findElement(DOB_MONTH_IDENTIFIER);
-		WebElement DOB3 = driver.findElement(DOB_YEARS_IDENTIFIER);
-		Select select1 = new Select(DOB1);
-		Select select2 = new Select(DOB2);
-		Select select3 = new Select(DOB3);
-		select1.selectByValue("1");
-		select2.selectByIndex(1);
-		select3.selectByIndex(20);
-		driver.findElement(ADDRESS_IDENTIFIER).sendKeys("Test Address");
-		driver.findElement(CITY_IDENTIFIER).sendKeys("New York");
-		WebElement state = driver.findElement(STATE_IDENTIFIER);
-		Select state1 = new Select(state);
-		state1.selectByIndex(1);
-		driver.findElement(POSTAL_CODE_IDENTIFIER).sendKeys("12342");
-		driver.findElement(MOBILE_PHONE_IDENTIFIER).sendKeys("23456789");
-		driver.findElement(REGISTER_BUTTON_IDENTIFIER).click();
-		Thread.sleep(1000);
-		driver.findElement(PROCEED_TO_CHECKOUT_IDENTIFIER).click();
-		driver.findElement(AGREE_TERMS_IDENTIFIER).click();
-		Thread.sleep(2000);
-		driver.findElement(PROCEED_TO_CHECKOUT_IDENTIFIER1).click();
-		Thread.sleep(3000);
-		driver.findElement(PAY_BY_CHECK_IDENTIFIER).click();
-		driver.findElement(CONFIRM_ORDER_BUTTON_IDENTIFIER).click();
-	}
-
+		CreateAccountPage ca = new CreateAccountPage(driver);
+		ca.createNewAccount();
+	}	
+	
 	public void existingUserSignin(String email, String password) throws InterruptedException {
 		
 		driver.findElement(EMAIL).sendKeys(email);
@@ -93,17 +64,17 @@ public class CheckOut extends Base {
 
 	public void proceedToChkout() throws InterruptedException {
 
-		driver.findElement(PROCEED_TO_CHECKOUT_IDENTIFIER).click();
-		driver.findElement(AGREE_TERMS_IDENTIFIER).click();
+		driver.findElement(PROCEED_TO_CHECKOUT).click();
+		driver.findElement(AGREE_TERMS).click();
 		Thread.sleep(2000);
-		driver.findElement(PROCEED_TO_CHECKOUT_IDENTIFIER1).click();
+		driver.findElement(PROCEED_TO_CHECKOUT1).click();
 		Thread.sleep(3000);
-		driver.findElement(PAY_BY_CHECK_IDENTIFIER).click();
-		driver.findElement(CONFIRM_ORDER_BUTTON_IDENTIFIER).click();
+		driver.findElement(PAY_BY_CHECK).click();
+		driver.findElement(CONFIRM_ORDER_BUTTON).click();
 	}
 
 	public static String orderConfirmationMsg() {
-		String ConfirmationMessage = driver.findElement(CONFIRMATION_TEXT_IDENTIFIER).getText();
+		String ConfirmationMessage = driver.findElement(CONFIRMATION_TEXT).getText();
 		return ConfirmationMessage;
 	}
 

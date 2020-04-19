@@ -17,22 +17,19 @@ public class Base {
 	public Properties prop;
 
 	public WebDriver initDriver() throws IOException {
+		
 		prop = new Properties();
 		
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + prop.getProperty(key));
-		//System.out.println(System.getProperty("user.dir") + Configurations.ChromeDriverPath);
 		String userDir = System.getProperty("user.dir");
 		System.out.println(userDir);
 		FileInputStream fis = new FileInputStream(userDir + "\\src\\main\\java\\Resources\\data.properties");
 		
 		prop.load(fis);
 		String browser = prop.getProperty("browser");
-		String browserDriver = prop.getProperty("chromeDriverPath");
-		System.out.println(userDir+browserDriver);
+				
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", userDir + prop.getProperty("chromeDriverPath"));
-			//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pavan\\Selenium\\Drivers\\chromedriver.exe" );
-			
+					
 			driver = new ChromeDriver();
 			driver.get(prop.getProperty("url"));
 			
